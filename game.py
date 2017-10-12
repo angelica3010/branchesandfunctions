@@ -9,7 +9,7 @@ def letsgo(name):
     time.sleep(1.5)
     print("You see a sign for the D train to Stillwell Ave and a 7 train to 42nd St Times Square.")
     time.sleep(1.5)
-    
+
     badchoice = True
     while badchoice:
         choice = input("\"Should we stay in Manhattan or explore Brooklyn today?\" > ")
@@ -114,7 +114,7 @@ def beach():
         #print("LETS EAT")
     else:
         ("\"I didn't understand your choice.  Did you say 'yes' or 'no?'\"\n")
-        
+
 
 def swim_yea():
     badchoice = True
@@ -136,7 +136,7 @@ def swim_no():
     while badchoice:
         choice = input("\"Thank goodness you said no to swimming.  It looks sooooooo cold.\nWell, we got in some nice sun time at the shore.  Shall we take the N train or D train to go home?\" > ")
         choice = normalizer(choice)
-        
+
         if choice in ["D", "N"]:
              badchoice = False
              print(f"On the {choice}")
@@ -151,7 +151,7 @@ def hotdog():
     while badchoice:
         choice = input("\"Those natural casing hotdogs at Nathans were the real deal!  Great suggestion!  But, we ate way too much. Should we take the N train or D train to go home?\" > ")
         choice = normalizer(choice)
-        
+
         if choice in ["D", "N"]:
              badchoice = False
              time.sleep(1.5)
@@ -219,7 +219,7 @@ def play_man():
             #print("LETS EAT")
         else:
             print("\"I didn't understand your choice.  Did you say 'yes' or 'no?'\"\n")
-            
+
 
 def eat_man():
     badchoice = True
@@ -239,7 +239,7 @@ def eat_man():
             #print("LETS EAT")
         else:
             print("\"I didn't understand your choice.  Did you say 'pasta' or 'sandwiches?'\"\n")
-            
+
 
 def show():
     badchoice = True
@@ -266,7 +266,7 @@ def show_yea():
     while badchoice:
         choice = input("\"Awesome, that show was great. I almost thought that dude was gonna get eaten by the lion!  But he didn't and then he became a king!  What a great day!  Should we take the N train or D train to go home?\" > ")
         choice = normalizer(choice)
-        
+
         if choice in ["D", "N"]:
              badchoice = False
              print(f"On the {choice}")
@@ -274,14 +274,14 @@ def show_yea():
              gohome(name, choice)
         else:
              print("\"Sorry, I'm too tired. Say 'D' or 'N' for us to leave.\" \n")
-             
+
 
 def show_no():
     badchoice = True
     while badchoice:
         choice = input("\"Thank goodness.  I do not have enough money anyway.  This freakin town is mad $$$$!  Should we take the N train or D train to go home?\" > ")
         choice = normalizer(choice)
-        
+
         if choice in ["D", "N"]:
              badchoice = False
              print(f"On the {choice}")
@@ -296,7 +296,7 @@ def pasta():
     while badchoice:
         choice = input("\"Holy cow, that pasta was amazing!  I didn't care so much for the snails though.  You scarfed everything down like it was your last day!\nI think we ate way too much.\nShould we take the N train or D train to go home?\" > ")
         choice = normalizer(choice)
-        
+
         if choice in ["D", "N"]:
              badchoice = False
              print(f"On the {choice}")
