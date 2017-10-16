@@ -79,7 +79,7 @@ def play_bk():
 def eat_bk():
     badchoice = True
     while badchoice:
-        choice = input("Do you want to eat hot dog or pizza? > ")
+        choice = input("Do you want to eat hotdog or pizza? > ")
         choice = normalizer(choice)
 
         if choice in ["HOT", "DOG", "HOTDOG"]:
@@ -93,7 +93,7 @@ def eat_bk():
             pizza()
             #print("LETS EAT")
         else:
-            print("\"I didn't understand your choice.  Did you say 'hot dog' or 'pizza?'\"\n")
+            print("\"I didn't understand your choice.  Did you say 'hotdog' or 'pizza?'\"\n")
 
 
 def beach():
