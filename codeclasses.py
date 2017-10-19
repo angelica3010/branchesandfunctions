@@ -16,7 +16,7 @@ class Engine(object):
         #print(f"Scene Map {self.scene_map}")
 
     def play(self):
-        curent_scene = self.scene_map.opening_scene()
+        current_scene = self.scene_map.opening_scene()
         #print(f"This is the current scene {self.current_scene}")
         last_scene = self.scene_map.next_scene('Winner')
 
@@ -95,7 +95,7 @@ class Met(Scene):
             print("Why bother even checking out this museum? I only came here to runaway from this homeless man. I might as well fall asleep and just drink some more. ZzZZzz")
             return 'Gameover'
         else:
-            print("Choose Egyptiangallery, skip on bar bill and run, or fall asleep.")
+            print("Choose check out Egyptian art, skip on bar bill and run, or fall asleep.")
             return 'Met'
 
 class Egyptiangallery(Scene):
@@ -144,7 +144,7 @@ class Map(object):
         #print(f"this is the next_scene {self.scene_name}")
 
         val = Map.scenes.get(scene_name)
-        print(f"this is val now {val}")
+        #print(f"this is val now {val}")
         return val
     def opening_scene(self):
         #print(self.next_scene(self.start_scene))
@@ -152,5 +152,5 @@ class Map(object):
 
 a_map = Map('Bryant Park')
 a_game = Engine(a_map)
-print(f"here is a_map {a_map} and here is {a_game}" )
+#print(f"here is a_map {a_map} and here is {a_game}" )
 a_game.play()
