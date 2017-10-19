@@ -1,5 +1,5 @@
 from sys import exit
-from random import randint
+from random import randint, choice
 from textwrap import dedent
 
 class Scene(object):
@@ -36,7 +36,7 @@ class Gameover(Scene):
     ]
 
     def enter(self):
-        print(Gameover.loser[randint(0, len(self.loser)-1)])
+        print(choice(self.loser))
         exit(1)
 
 class Bryant_park(Scene):
@@ -44,7 +44,7 @@ class Bryant_park(Scene):
     def enter(self):
         print("Welcome to New York City. You are currently at Bryant Park. Let's explore. Do you want to take a train, taxi, or walk around the city?")
 
-        action = input('> ').lower()
+        action = input('> ').lower().strip()
         if action == "train":
             print("Ok let's take the train to Central Park")
             return 'Central Park'
@@ -62,7 +62,7 @@ class Central_park(Scene):
 
     def enter(self):
         print("It's such a lovely day in Central Park. Walking around and everything is nice and green. Oh no, a homeless man just asked me for money. What should I do?")
-        action = input('> ').lower()
+        action = input('> ').lower().strip()
 
 
         if action == "give money":
@@ -82,7 +82,7 @@ class Met(Scene):
 
     def enter(self):
         print("I am so stressed from running away from that homeless man. I cannot believe I just experienced that. Thank goodness the Met Museum has some alcohol, so after two beers, I am so much better. Should I check out some Egyptian art? Or maybe I should try running away from this bar bill. Unless I want to just drink the night away and fall asleep.")
-        action = input('> ').lower()
+        action = input('> ').lower().strip()
 
 
         if action == "check out egyptian art":
@@ -103,7 +103,7 @@ class Egyptiangallery(Scene):
 
     def enter(self):
         print("Wow I just found a pen and I'm in the Egyptian Gallery. There are so many great artifacts here. What should I do with this pen? Should I graffiti a statue? Should I steal the statue? Or leave with the pen, since I'm so tired?")
-        action = input('> ').lower()
+        action = input('> ').lower().strip()
 
 
         if action == "steal":
