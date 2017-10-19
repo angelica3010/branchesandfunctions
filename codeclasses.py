@@ -95,7 +95,7 @@ class Met(Scene):
             print("Why bother even checking out this museum? I only came here to runaway from this homeless man. I might as well fall asleep and just drink some more. ZzZZzz")
             return 'Gameover'
         else:
-            print("Choose Egyptiangallery, skip on bar bill and run, or fall asleep.")
+            print("Choose check out Egyptian art, skip on bar bill and run, or fall asleep.")
             return 'Met'
 
 class Egyptiangallery(Scene):
